@@ -10,12 +10,12 @@ const CONTACT_LINKS = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/yourprofile',
+    href: 'https://www.linkedin.com/in/zyrish-manuel/',
     external: true,
   },
   {
     label: 'GitHub',
-    href: 'https://github.com/yourprofile',
+    href: 'https://github.com/marze-zy',
     external: true,
   },
 ]
