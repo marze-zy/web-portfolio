@@ -1,56 +1,40 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useCallback } from 'react'
+import { useThemeToggle } from '@/hooks/useThemeToggle'
+
+const NAV_LINKS = [
+  { href: '#hero', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#education', label: 'Education' },
+  { href: '#contact', label: 'Contact' },
+]
 
 export default function Navbar() {
-  useEffect(() => {
-    const themeToggle = document.getElementById('theme-toggle')
-    const currentTheme = localStorage.getItem('theme')
+  const { toggleTheme } = useThemeToggle()
 
-    // Initialize theme
-    function initializeTheme() {
-      if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme)
-      } else {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.setAttribute('data-theme', 'dark')
-        }
-      }
-    }
-
-    // Toggle theme
-    function toggleTheme() {
-      const theme = document.documentElement.getAttribute('data-theme')
-      const newTheme = theme === 'dark' ? 'light' : 'dark'
-      document.documentElement.setAttribute('data-theme', newTheme)
-      localStorage.setItem('theme', newTheme)
-    }
-
-    initializeTheme()
-
-    if (themeToggle) {
-      themeToggle.addEventListener('click', toggleTheme)
-    }
-
-    return () => {
-      if (themeToggle) {
-        themeToggle.removeEventListener('click', toggleTheme)
-      }
-    }
-  }, [])
+  const handleThemeToggle = useCallback(() => {
+    toggleTheme()
+  }, [toggleTheme])
 
   return (
     <nav className="navbar">
       <div className="container">
         <span className="logo">AZM</span>
         <ul className="nav-links">
-          <li><a href="#hero">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
+          {NAV_LINKS.map((link) => (
+            <li key={link.href}>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
         </ul>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+        <button
+          id="theme-toggle"
+          onClick={handleThemeToggle}
+          aria-label="Toggle Dark Mode"
+          type="button"
+        >
           <span className="icon-sun">☀️</span>
           <span className="icon-moon">🌙</span>
         </button>
