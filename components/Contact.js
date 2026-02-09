@@ -5,7 +5,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 const CONTACT_LINKS = [
   {
     label: 'Email',
-    href: 'mailto:your.email@example.com',
+    href: 'mailto:anzymanuel@gmail.com',
     external: false,
   },
   {

@@ -6,16 +6,16 @@ const EDUCATION_ITEMS = [
   {
     id: 'degree',
     title: 'BS in Computer Engineering',
-    school: 'Technological Institute of the Philippines (TIP)',
+    school: 'STI College - Caloocan',
     year: 'Expected Graduation: 2026',
     description: 'Specialized coursework in embedded systems, digital electronics, and hardware-software integration.',
   },
   {
     id: 'certifications',
-    title: 'Technical Certifications',
-    school: 'Self-Study & Hands-On Projects',
-    year: 'Ongoing',
-    description: 'Continuously learning through project-based experience and industry-standard tools.',
+    title: 'TESDA NCIII in Java Programming',
+    school: 'Technical Education and Skills Development Authority (TESDA)',
+    year: '2024',
+    description: 'Learned Java programming fundamentals, object-oriented programming, and software development best practices through a comprehensive training program.',
   },
 ]
 

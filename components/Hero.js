@@ -4,7 +4,8 @@ export default function Hero() {
       <div className="container">
         <h1>Andrei Zyrish C. Manuel</h1>
         <p className="subtitle">
-          Computer Engineering Student | Embedded Systems & Hardware-Software Integration
+          Computer Engineering Student </p>
+          <br></br><p>Embedded Systems & Hardware-Software Integration
         </p>
         <p className="bio">
           Focused on building practical, real-world solutions while strengthening core engineering and collaboration skills.
