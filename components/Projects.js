@@ -4,7 +4,7 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
 const PROJECT_DATA = {
   title: 'AlphaBot',
-  role: 'Hardware & Embedded Systems Designer',
+  role: 'Hardware & Embedded Systems Designer | UI Designer',
   date: 'Aug 2024 – Nov 2025',
   details: [
     'Developed system UI for seamless software interaction and monitoring.',
