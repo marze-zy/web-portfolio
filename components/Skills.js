@@ -28,6 +28,14 @@ const SKILL_CATEGORIES = [
       'Continuous Learning',
     ],
   },
+  {
+    title: 'Equipments',
+    skills: [
+      'Bambu Lab A1 mini 3D Printer',
+      'Asus TUF Gaming A15 Laptop',
+      'Raspberry Pi 5',
+    ],
+  },
 ]
 
 function SkillCategory({ title, skills }) {
