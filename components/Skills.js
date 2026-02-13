@@ -9,6 +9,7 @@ const SKILL_CATEGORIES = [
       'Embedded Systems',
       '3D Modeling (CAD)',
       'Java & Python (Foundational)',
+      'Frontend Development (UI/UX Desinging)',
       'Git / GitHub',
     ],
   },
