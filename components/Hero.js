@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <header id="hero" className="hero">
       <div className="container">
-        <h1>Andrei Zyrish C. Manuel</h1>
+        <h1 className="animated-name">Andrei Zyrish C. Manuel</h1>
         <p className="subtitle">
           Computer Engineering Student </p>
         <p>Embedded Systems & Hardware-Software Integration

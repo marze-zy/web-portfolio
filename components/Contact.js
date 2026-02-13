@@ -1,33 +1,40 @@
 'use client'
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { EmailIcon, LinkedInIcon, GitHubIcon } from './Icons'
 
 const CONTACT_LINKS = [
   {
     label: 'Email',
+    icon: EmailIcon,
     href: 'mailto:anzymanuel@gmail.com',
     external: false,
   },
   {
     label: 'LinkedIn',
+    icon: LinkedInIcon,
     href: 'https://www.linkedin.com/in/zyrish-manuel/',
     external: true,
   },
   {
     label: 'GitHub',
+    icon: GitHubIcon,
     href: 'https://github.com/marze-zy',
     external: true,
   },
 ]
 
-function ContactLink({ label, href, external }) {
+function ContactLink({ label, icon: Icon, href, external }) {
   return (
     <a
       href={href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
+      className="contact-icon-link"
+      aria-label={label}
+      title={label}
     >
-      {label}
+      <Icon className="contact-icon" />
     </a>
   )
 }
@@ -48,6 +55,7 @@ export default function Contact() {
               <ContactLink
                 key={link.label}
                 label={link.label}
+                icon={link.icon}
                 href={link.href}
                 external={link.external}
               />
