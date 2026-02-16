@@ -1,6 +1,7 @@
 'use client'
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { TrophyIcon } from './Icons'
 
 const PROJECTS_DATA = [
   {
@@ -19,6 +20,7 @@ const PROJECTS_DATA = [
     title: 'AlphaBot',
     role: 'Hardware Engineer | UI Designer',
     date: 'Aug 2024 – Nov 2025',
+    award: 'Symposium Candidate for Best Capstone',
     details: [
       'Developed system UI for seamless software interaction and monitoring.',
       'Engineered full hardware systems: CAD modeling, 3D printing, wiring, and component integration.',
@@ -52,7 +54,15 @@ export default function Projects() {
                   ) : (
                     project.title
                   )}
+                  {project.award && (
+                    <TrophyIcon className="trophy-icon" />
+                  )}
                 </h3>
+                {project.award && (
+                  <div className="award-badge">
+                    <span>{project.award}</span>
+                  </div>
+                )}
                 <p className="role">
                   <strong>Role:</strong> {project.role}
                 </p>
