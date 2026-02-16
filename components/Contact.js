@@ -1,7 +1,7 @@
 'use client'
 
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
-import { EmailIcon, LinkedInIcon, GitHubIcon } from './Icons'
+import { EmailIcon, LinkedInIcon, GitHubIcon, DownloadIcon } from './Icons'
 
 const CONTACT_LINKS = [
   {
@@ -61,6 +61,14 @@ export default function Contact() {
               />
             ))}
           </div>
+          <a
+            href="/CV - ANDREI ZYRISH MANUEL.pdf"
+            download="CV - ANDREI ZYRISH MANUEL.pdf"
+            className="download-resume-btn"
+          >
+            <DownloadIcon className="download-icon" />
+            Download Resume
+          </a>
         </div>
       </div>
     </section>

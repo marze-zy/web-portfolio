@@ -748,6 +748,41 @@ body::before {
     transform: scale(1.2) rotate(10deg);
 }
 
+.download-resume-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+    padding: 14px 28px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.download-resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+}
+
+.download-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s ease;
+    color: inherit;
+    stroke: currentColor;
+}
+
+.download-resume-btn:hover .download-icon {
+    transform: translateY(3px);
+}
+
+
 /* ============================================
    Responsive Design
    ============================================ */
