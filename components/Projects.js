@@ -32,6 +32,7 @@ const PROJECTS_DATA = [
     ],
     technologies: ['UI/UX Design', 'Web Design', 'Responsive Layout'],
     link: 'https://www.sakay-ph.net/',
+    image: '/images/sakay.png',
   },
 
 ]
@@ -46,6 +47,11 @@ export default function Projects() {
         <div className="projects-container">
           {PROJECTS_DATA.map((project, index) => (
             <div key={index} className="project-card">
+              {project.image && (
+                <div className="project-image-container">
+                  <img src={project.image} alt={`${project.title} preview`} className="project-corner-image" />
+                </div>
+              )}
               <div className="project-content">
                 <h3>
                   {project.link ? (
