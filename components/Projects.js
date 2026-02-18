@@ -5,18 +5,6 @@ import { TrophyIcon } from './Icons'
 
 const PROJECTS_DATA = [
   {
-    title: 'Sakay PH',
-    role: 'UI/UX Designer',
-    date: '2026',
-    details: [
-      'Designed the complete user interface and layout for the Sakay PH web application.',
-      'Created intuitive and user-friendly design patterns for transportation information.',
-      'Focused on accessibility and responsive design principles.',
-    ],
-    technologies: ['UI/UX Design', 'Web Design', 'Responsive Layout'],
-    link: 'https://www.sakay-ph.net/',
-  },
-  {
     title: 'AlphaBot',
     role: 'Hardware Engineer | UI Designer',
     date: 'Aug 2024 – Nov 2025',
@@ -33,6 +21,19 @@ const PROJECTS_DATA = [
       'UI Design',
     ],
   },
+  {
+    title: 'Sakay PH',
+    role: 'UI/UX Designer',
+    date: '2026',
+    details: [
+      'Designed the complete user interface and layout for the Sakay PH web application.',
+      'Created intuitive and user-friendly design patterns for transportation information.',
+      'Focused on accessibility and responsive design principles.',
+    ],
+    technologies: ['UI/UX Design', 'Web Design', 'Responsive Layout'],
+    link: 'https://www.sakay-ph.net/',
+  },
+
 ]
 
 export default function Projects() {

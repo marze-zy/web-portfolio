@@ -6,31 +6,33 @@ const SKILL_CATEGORIES = [
   {
     title: 'Core Skills',
     skills: [
+      'Frontend Development ( Next.js, HTML, CSS)',
+      'Backend Development (Java, Python)',
+      'UI/UX Design',
       'Embedded Systems',
       '3D Modeling (CAD)',
-      'Java & Python (Foundational)',
-      'Frontend Development (UI/UX Desinging)',
       'Git / GitHub',
     ],
   },
   {
-    title: 'Tools & Software',
+    title: 'Tools',
     skills: [
       'KiCad & EasyEDA',
-      'Onshape & AutoCAD',
-      'VS Code & IntelliJ',
+      'Onshape',
+      'Visual Studio & Visual Studio Code',
+      'IntelliJ'
     ],
   },
   {
     title: 'Soft Skills',
     skills: [
-      'Problem Solving',
-      'Team Collaboration',
+      'Systems Thinking',
+      'Cross-Functional Collaboration',
       'Continuous Learning',
     ],
   },
   {
-    title: 'Equipments',
+    title: 'Prototyping Stack',
     skills: [
       'Bambu Lab A1 mini 3D Printer',
       'Asus TUF Gaming A15 Laptop',

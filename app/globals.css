@@ -93,7 +93,7 @@ body::before {
    ============================================ */
 
 .container {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
@@ -116,14 +116,16 @@ body::before {
 
 .navbar .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    gap: 2rem;
 }
 
 .logo {
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--accent-color);
+    margin-right: auto;
 }
 
 .nav-links {
@@ -320,7 +322,7 @@ body::before {
 }
 
 .hero .container {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0;
     padding: 0 4rem;
 }
@@ -486,7 +488,7 @@ body::before {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -541,8 +543,9 @@ body::before {
 
 .projects-container {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -866,6 +869,10 @@ body::before {
     }
 
     .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-container {
         grid-template-columns: 1fr;
     }
 }
