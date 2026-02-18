@@ -3,14 +3,7 @@
 import { useState, useCallback, useEffect } from 'react'
 import { useThemeToggle } from '@/hooks/useThemeToggle'
 
-const NAV_LINKS = [
-  { href: '#hero', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#education', label: 'Education' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#contact', label: 'Contact' },
-]
+
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -52,15 +45,6 @@ export default function Navbar() {
       <div className="container">
         <span className="logo">AZM</span>
 
-        {/* Desktop Navigation */}
-        <ul className="nav-links">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
-            </li>
-          ))}
-        </ul>
-
         {/* Theme Toggle and Hamburger */}
         <div className="nav-controls">
           <button
@@ -71,19 +55,6 @@ export default function Navbar() {
           >
             <span className="icon-sun">☀️</span>
             <span className="icon-moon">🌙</span>
-          </button>
-
-          {/* Hamburger Button */}
-          <button
-            className="hamburger"
-            onClick={handleMenuToggle}
-            aria-label="Toggle Mobile Menu"
-            type="button"
-            aria-expanded={mobileMenuOpen}
-          >
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
-            <span className="hamburger-line"></span>
           </button>
         </div>
       </div>
