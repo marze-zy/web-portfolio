@@ -20,7 +20,6 @@ export default function ChatWidget() {
         "Ask me about his 3D printing projects!",
         "Curious about AlphaBot?",
         "I can tell you about his skills!",
-        "Need info on SAKAY PH concept?",
         "Hi! Ask me anything!",
         "Let's chat about embedded systems!"
     ]
@@ -121,17 +120,73 @@ export default function ChatWidget() {
                     </div>
 
                     <div className="chat-messages">
-                        {messages.map((msg, index) => (
-                            <div key={index} className={`message ${msg.role === 'user' ? 'user-message' : 'ai-message'}`}>
-                                <div className="message-content">
-                                    {msg.parts[0].text}
+                        {messages.map((msg, index) => {
+                            const rawText = msg.parts[0].text
+                            const showResumeButton = rawText.includes('[SHOW_RESUME_BUTTON]')
+                            const showGithubButton = rawText.includes('[SHOW_GITHUB_BUTTON]')
+                            const showLinkedinButton = rawText.includes('[SHOW_LINKEDIN_BUTTON]')
+                            const showEmailButton = rawText.includes('[SHOW_EMAIL_BUTTON]')
+
+                            let displayText = rawText
+                                .replace('[SHOW_RESUME_BUTTON]', '')
+                                .replace('[SHOW_GITHUB_BUTTON]', '')
+                                .replace('[SHOW_LINKEDIN_BUTTON]', '')
+                                .replace('[SHOW_EMAIL_BUTTON]', '')
+                                .trim()
+
+                            return (
+                                <div key={index} className={`message ${msg.role === 'user' ? 'user-message' : 'ai-message'}`}>
+                                    <div className="message-content">
+                                        {displayText}
+                                        {(showResumeButton || showGithubButton || showLinkedinButton || showEmailButton) && (
+                                            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
+                                                {showResumeButton && (
+                                                    <a
+                                                        href="/CV - ANDREI ZYRISH MANUEL.pdf"
+                                                        download="Andrei_Manuel_Resume.pdf"
+                                                        className="chat-action-btn chat-resume-btn"
+                                                    >
+                                                        Download CV
+                                                    </a>
+                                                )}
+                                                {showGithubButton && (
+                                                    <a
+                                                        href="https://github.com/marze-zy"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="chat-action-btn chat-github-btn"
+                                                    >
+                                                        GitHub
+                                                    </a>
+                                                )}
+                                                {showLinkedinButton && (
+                                                    <a
+                                                        href="https://www.linkedin.com/in/zyrish-manuel/"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="chat-action-btn chat-linkedin-btn"
+                                                    >
+                                                        LinkedIn
+                                                    </a>
+                                                )}
+                                                {showEmailButton && (
+                                                    <a
+                                                        href="mailto:anzymanuel@gmail.com"
+                                                        className="chat-action-btn chat-email-btn"
+                                                    >
+                                                        Email Me
+                                                    </a>
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            )
+                        })}
                         {isLoading && (
                             <div className="message ai-message">
-                                <div className="message-content typing-indicator">
-                                    <span>.</span><span>.</span><span>.</span>
+                                <div className="typing-indicator">
+                                    <span></span><span></span><span></span>
                                 </div>
                             </div>
                         )}
