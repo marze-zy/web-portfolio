@@ -1,4 +1,7 @@
 import './globals.css'
+import Script from 'next/script'
+import ChatWidget from '@/components/ChatWidget'
+import IntroLoader from '@/components/IntroLoader'
 
 export const metadata = {
   title: 'My Portfolio',
@@ -19,7 +22,14 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Blanka&display=swap" rel="stylesheet" />
       </head>
       <body>
+        <IntroLoader />
+
         {children}
+
+        {/* Global floating robot */}
+        <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" strategy="lazyOnload" />
+
+        <ChatWidget />
       </body>
     </html>
   )
