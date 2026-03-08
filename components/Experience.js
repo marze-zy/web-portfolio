@@ -8,7 +8,7 @@ const EXPERIENCE_ITEMS = [
     title: 'Frontend Developer Intern',
     company: 'Sakay-PH (Startup)',
     year: 'Jan 2025 – Present',
-    description: 'Designing and developing web applications using React and TypeScript. Collaborating with cross-functional teams to implement user-friendly interfaces and optimize performance.',
+    description: 'Designing and developing website & web applications using React and TypeScript. Collaborating with cross-functional teams to implement user-friendly interfaces and optimize performance.',
   },
 ]
 

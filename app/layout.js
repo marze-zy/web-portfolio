@@ -2,6 +2,7 @@ import './globals.css'
 import Script from 'next/script'
 import ChatWidget from '@/components/ChatWidget'
 import IntroLoader from '@/components/IntroLoader'
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: 'My Portfolio',
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" strategy="lazyOnload" />
 
         <ChatWidget />
+        <Analytics />
       </body>
     </html>
   )
