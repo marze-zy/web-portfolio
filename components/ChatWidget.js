@@ -142,8 +142,8 @@ export default function ChatWidget() {
                                             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
                                                 {showResumeButton && (
                                                     <a
-                                                        href="/CV - ANDREI ZYRISH MANUEL.pdf"
-                                                        download="Andrei_Manuel_Resume.pdf"
+                                                        href="/Manuel_Resume.pdf"
+                                                        download="Manuel_Resume.pdf"
                                                         className="chat-action-btn chat-resume-btn"
                                                     >
                                                         Download CV

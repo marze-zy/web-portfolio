@@ -62,8 +62,8 @@ export default function Contact() {
             ))}
           </div>
           <a
-            href="/CV - ANDREI ZYRISH MANUEL.pdf"
-            download="CV - ANDREI ZYRISH MANUEL.pdf"
+            href="/Manuel_Resume.pdf"
+            download="Manuel_Resume.pdf"
             className="download-resume-btn"
           >
             <DownloadIcon className="download-icon" />
