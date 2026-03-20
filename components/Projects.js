@@ -34,6 +34,18 @@ const PROJECTS_DATA = [
     link: 'https://www.sakay-ph.net/',
     image: '/images/sakay.png',
   },
+  {
+    title: 'Shikifujin Builders OPC',
+    role: 'Web Developer',
+    date: '2026',
+    details: [
+      'Developed the complete full web application from scratch.',
+      'Designed and implemented the user interface, incorporating modern design principles.',
+      'Ensured full responsiveness across mobile, tablet, and desktop devices.',
+    ],
+    technologies: ['Web Development', 'UI/UX Design', 'Responsive Design'],
+    link: 'https://www.shikifujinbuilders.com/',
+  },
 
 ]
 
