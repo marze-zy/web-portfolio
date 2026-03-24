@@ -21,6 +21,7 @@ const PROJECTS_DATA = [
       'UI Design',
     ],
   },
+  /*
   {
     title: 'Sakay PH',
     role: 'UI/UX Designer',
@@ -46,7 +47,7 @@ const PROJECTS_DATA = [
     technologies: ['Web Development', 'UI/UX Design', 'Responsive Design'],
     link: 'https://www.shikifujinbuilders.com/',
   },
-
+  */
 ]
 
 export default function Projects() {
