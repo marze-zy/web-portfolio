@@ -21,9 +21,6 @@ export default function Hero() {
             <a href="#contact" className="btn secondary">
               Get In Touch
             </a>
-            <a href="/Manuel_Resume.pdf" download="Manuel_Resume.pdf" className="btn secondary">
-              Download CV
-            </a>
           </div>
         </div>
 

@@ -122,13 +122,11 @@ export default function ChatWidget() {
                     <div className="chat-messages">
                         {messages.map((msg, index) => {
                             const rawText = msg.parts[0].text
-                            const showResumeButton = rawText.includes('[SHOW_RESUME_BUTTON]')
                             const showGithubButton = rawText.includes('[SHOW_GITHUB_BUTTON]')
                             const showLinkedinButton = rawText.includes('[SHOW_LINKEDIN_BUTTON]')
                             const showEmailButton = rawText.includes('[SHOW_EMAIL_BUTTON]')
 
                             let displayText = rawText
-                                .replace('[SHOW_RESUME_BUTTON]', '')
                                 .replace('[SHOW_GITHUB_BUTTON]', '')
                                 .replace('[SHOW_LINKEDIN_BUTTON]', '')
                                 .replace('[SHOW_EMAIL_BUTTON]', '')
@@ -138,17 +136,8 @@ export default function ChatWidget() {
                                 <div key={index} className={`message ${msg.role === 'user' ? 'user-message' : 'ai-message'}`}>
                                     <div className="message-content">
                                         {displayText}
-                                        {(showResumeButton || showGithubButton || showLinkedinButton || showEmailButton) && (
+                                        {(showGithubButton || showLinkedinButton || showEmailButton) && (
                                             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
-                                                {showResumeButton && (
-                                                    <a
-                                                        href="/Manuel_Resume.pdf"
-                                                        download="Manuel_Resume.pdf"
-                                                        className="chat-action-btn chat-resume-btn"
-                                                    >
-                                                        Download CV
-                                                    </a>
-                                                )}
                                                 {showGithubButton && (
                                                     <a
                                                         href="https://github.com/marze-zy"
